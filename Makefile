@@ -16,7 +16,8 @@ gh-pages: release
 	cp -f ${RELEASE}/example.html release.tar.gz /tmp/
 	rm -rf ${RELEASE}
 	git checkout gh-pages && cp -f /tmp/example.html index.html && cp -f /tmp/release.tar.gz ./
-	git commit -am "new release"
+	git add --all 
+	git commit -m "new release"
 	git checkout master
 
 setup_venv:
