@@ -13,8 +13,11 @@ all: release
 gh-pages: release
 	cd ${RELEASE} && make -f example.make setup_venv 
 	cd ${RELEASE} && source .venv/bin/activate && make -f example.make build 
-	cp ${RELEASE}/example.html index.html
+	cp -f ${RELEASE}/example.html release.tar.gz /tmp/
 	rm -rf ${RELEASE}
+	git checkout gh-pages && cp -f /tmp/example.html index.html && cp -f /tmp/release.tar.gz ./
+	git commit -am "new release"
+	git checkout master
 
 setup_venv:
 	virtualenv .venv 
