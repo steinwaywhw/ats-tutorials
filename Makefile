@@ -2,11 +2,20 @@
 
 
 
-all: release 
-	cd release && make -f example.make build
+
 
 # STATIC=./static/
 RELEASE=./release/
+
+
+all: release 
+	cd ${RELEASE} && make -f example.make build
+
+gh-pages: release
+	cd ${RELEASE} && make -f example.make setup_venv 
+	cd ${RELEASE} && source .venv/bin/activate && make -f example.make build 
+	cp ${RELEASE}/example.html index.html
+	rm -rf ${RELEASE}
 
 # download:
 # 	mkdir -p ${STATIC}
