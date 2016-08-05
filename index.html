@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Boston University CS320</title>
+  <title>ATS Tutorial Tools</title>
   <style type="text/css">code{white-space: pre-wrap;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -75,13 +75,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="row">
   <section class="header col-md-3" style="position:fixed">
             <header>
-    <h1 class="title">Boston University CS320</h1>
+    <h1 class="title">ATS Tutorial Tools</h1>
                 </header>
     
     <section class="toc">
         <nav id="TOC">
     <ul>
     <li><a href="#ats-tutorials-tooling-support">ATS Tutorials Tooling Support</a><ul>
+    <li><a href="#contribution">Contribution</a></li>
+    <li><a href="#installation">Installation</a></li>
     <li><a href="#getting-start">Getting Start</a></li>
     <li><a href="#using-code-blocks">Using Code Blocks</a></li>
     <li><a href="#other-options">Other Options</a></li>
@@ -269,13 +271,28 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <script>window.ats_service.hljs = true</script>
 <h1 id="ats-tutorials-tooling-support">ATS Tutorials Tooling Support</h1>
 <p>Our toolset provides you with a plugin and supporting files on top of a regular <code>pandoc</code> workflow: writing markdown, and getting webpages. You gain all the benefits of markdown and all the power of <code>pandoc</code>, and you can easily wirte ATS programming language tutorials that embeds editable/runnable ATS code with proper highlighting.</p>
-<p>All the tools you need is in the released <code>lib</code> folder. It contains * a python filter <code>ats_tutorialize.py</code> for <code>pandoc</code>, which processes incoming <code>pandoc</code> parse tree, and transform it in some way to produce interactive tutorials.<br />
-* a template <code>ats_template.html</code> * a javascript file <code>ats_service.js</code> (compiled from coffeescript) that provides the interactive part of the webpage. * several stylesheets * and an example with proper makefile.</p>
+<p>All the tools you need is in the released <code>lib</code> folder. It contains</p>
+<ul>
+<li>a python filter <code>ats_tutorialize.py</code> for <code>pandoc</code>, which processes incoming <code>pandoc</code> parse tree, and transform it in some way to produce interactive tutorials.<br />
+</li>
+<li>a template <code>ats_template.html</code></li>
+<li>a javascript file <code>ats_service.js</code> (compiled from coffeescript) that provides the interactive part of the webpage.</li>
+<li>several stylesheets</li>
+<li>and an example with proper makefile.</li>
+</ul>
 <p>Before we can start, we need to ensure that we have the following software installed.</p>
 <ul>
 <li>python3, pip3, and <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtualenv</a></li>
 <li><a href="http://pandoc.org/">pandoc (latest)</a></li>
 </ul>
+<h2 id="contribution">Contribution</h2>
+<p>Please head to https://github.com/steinwaywhw/ats-tutorials. Issues, pull requests are welcomed.</p>
+<h2 id="installation">Installation</h2>
+<p>Installation is easy, just download the <a href="release.tar.gz" class="uri">release.tar.gz</a>, and install necessary softwares. Requested python packages can be setup by the following steps.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">make</span> -f example.make setup_venv <span class="co"># setup virtual env and install python packages</span>
+<span class="kw">source</span> .venv/bin/activate       <span class="co"># enter the virtual env</span></code></pre></div>
+<p>Then you can start working on the tutorials. After finished, remeber to deactivate the virtual environment by</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">deactivate</span></code></pre></div>
 <h2 id="getting-start">Getting Start</h2>
 <p>With <code>example.make</code> and <code>example.md</code>, we just type</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">make</span> -f example.make </code></pre></div>
