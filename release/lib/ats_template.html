@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+$for(author-meta)$
+  <meta name="author" content="$author-meta$">
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$">
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$">
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <style type="text/css">code{white-space: pre-wrap;}</style>
+$if(quotes)$
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+$endif$
+$if(highlighting-css)$
+  <style type="text/css">
+$highlighting-css$
+  </style>
+$endif$
+$for(css)$
+  <link rel="stylesheet" href="$css$">
+$endfor$
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typeplate-starter-kit/3.0.2/css/typeplate.min.css"> -->
+
+
+
+$if(math)$
+  $math$
+$endif$
+$if(ats)$
+  <script src="https://ats-lang.github.io/LIBRARY/libatscc2js/libatscc2js_all.js"></script>
+  <script src="https://ats-lang.github.io/LIBRARY/libatscc2js/libatscc2js_print_store_cats.js"></script>
+  <script src="https://ats-lang.github.io/LIBRARY/ats2langweb/pats2xhtmlize_dats.js"></script>
+$endif$
+$if(hljs)$
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/$hljs-style$.min.css">
+$endif$
+$if(jq)$
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+$endif$
+$if(ace)$
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.4/ace.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+$endif$
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+
+
+$for(header-includes)$
+  $header-includes$
+$endfor$
+</head>
+
+<body>
+<br>
+<div class="container">
+
+<div class="row">
+  <section class="header col-md-3" style="position:fixed">
+    $for(include-before)$
+    $include-before$
+    $endfor$
+    $if(title)$
+    <header>
+    <h1 class="title">$title$</h1>
+    $if(subtitle)$
+    <h1 class="subtitle">$subtitle$</h1>
+    $endif$
+    $for(author)$
+    <h2 class="author">$author$</h2>
+    $endfor$
+    $if(date)$
+    <h3 class="date">$date$</h3>
+    $endif$
+    </header>
+    $endif$
+
+    <section class="toc">
+    $if(toc)$
+    <nav id="$idprefix$TOC">
+    $toc$
+    </nav>
+    $endif$
+    </section>
+  </section>
+
+  <section class="main col-md-9 offset-md-3">
+$body$  
+  </section>
+</div>
+  
+<div class="row">
+  <section class="footer col-md-9 offset-md-3 m-b-3">
+    <hr>
+
+    $for(include-after)$
+    $include-after$
+    $endfor$
+
+    Copyright Notice 
+  </section>
+</div>
+
+</div>
+
+<script>
+  $$("button").addClass("btn btn-outline-primary btn-sm");
+  $$(".toc > nav ul").addClass("nav");
+  $$(".toc > nav ul li").addClass("nav-item");
+  $$(".toc > nav ul a").addClass("nav-link");
+  $$(".editable .control").addClass("m-b-1");
+  $$(".editable .output").addClass("m-t-1");
+</script>
+</body>
+</html>
