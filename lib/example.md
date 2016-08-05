@@ -2,7 +2,7 @@
 hljs: true
 hljs-style: solarized-light
 ace-style: solarized_dark
-title: Boston University CS320
+title: ATS Tutorial Tools
 ---
 
 # ATS Tutorials Tooling Support
@@ -10,6 +10,7 @@ title: Boston University CS320
 Our toolset provides you with a plugin and supporting files on top of a regular `pandoc` workflow: writing markdown, and getting webpages. You gain all the benefits of markdown and all the power of `pandoc`, and you can easily wirte ATS programming language tutorials that embeds editable/runnable ATS code with proper highlighting.
 
 All the tools you need is in the released `lib` folder. It contains 
+
 * a python filter `ats_tutorialize.py` for `pandoc`, which processes incoming `pandoc` parse tree, and transform it in some way to produce interactive tutorials.  
 * a template `ats_template.html` 
 * a javascript file `ats_service.js` (compiled from coffeescript) that provides the interactive part of the webpage. 
@@ -20,6 +21,25 @@ Before we can start, we need to ensure that we have the following software insta
 
 * python3, pip3, and [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 * [pandoc (latest)](http://pandoc.org/)
+
+## Contribution
+
+Please head to https://github.com/steinwaywhw/ats-tutorials. Issues, pull requests are welcomed. 
+
+## Installation
+
+Installation is easy, just download the [release.tar.gz](release.tar.gz), and install necessary softwares. Requested python packages can be setup by the following steps.
+
+```bash
+make -f example.make setup_venv # setup virtual env and install python packages
+source .venv/bin/activate       # enter the virtual env
+```
+
+Then you can start working on the tutorials. After finished, remeber to deactivate the virtual environment by 
+
+```bash 
+deactivate
+```
 
 ## Getting Start
 
@@ -84,3 +104,5 @@ As you can see, in the YAML front matter (the beginning of the raw content of th
 * `hljs-style`: choose a theme for `highlight.js`, see [github](https://github.com/isagalaev/highlight.js/tree/master/src/styles) for a complete list of styles. 
 * `ace-style`: choose a theme for the `ace` editor, see [github](https://github.com/ajaxorg/ace/tree/master/lib/ace/theme) for a complete list. Default to `solarized_dark`.
 * `title`: Title of the document. This is part of the options provided by `pandoc`, see the `ats_template.html` for a full list of options. Just look for template variables enclosed in `$`. 
+
+
