@@ -24,6 +24,7 @@ release: lib/*
 	coffee -c -o $(RELEASE)/lib lib/ats_service.coffee 
 	cp req.pip.txt lib/ats_template.html lib/editable.css lib/highlight.css ${RELEASE}/lib/
 	cp lib/example* ${RELEASE}
+	tar cz ${RELEASE} > release.tar.gz
 
 unrelease:
 	rm -rf ${RELEASE}
