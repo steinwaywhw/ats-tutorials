@@ -24,7 +24,7 @@ Before we can start, we need to ensure that we have the following software insta
 
 ## Contribution
 
-Please head to https://github.com/steinwaywhw/ats-tutorials. Issues, pull requests are welcomed. 
+Please head to <https://github.com/steinwaywhw/ats-tutorials>. Issues, pull requests are welcomed. 
 
 ## Installation
 
