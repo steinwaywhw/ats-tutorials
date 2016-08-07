@@ -8,10 +8,10 @@ ats_service =
 
   # endpoints
   api: 
-    tc:    "https://www.ats-lang.org/SERVER/MYCODE/atslangweb_patsopt_tcats_0_.php"
-    cc:    "https://www.ats-lang.org/SERVER/MYCODE/atslangweb_patsopt_ccats_0_.php" 
-    cjs:   "https://www.ats-lang.org/SERVER/MYCODE/atslangweb_patsopt_atscc2js_0_.php"
-    chtml: "https://www.ats-lang.org/SERVER/MYCODE/atslangweb_pats2xhtml_eval_0_.php"
+    tc:    "https://atslangweb-postiats.rhcloud.com/SERVER/MYCODE/atslangweb_patsopt_tcats_0_.php"
+    cc:    "https://atslangweb-postiats.rhcloud.com/SERVER/MYCODE/atslangweb_patsopt_ccats_0_.php" 
+    cjs:   "https://atslangweb-postiats.rhcloud.com/SERVER/MYCODE/atslangweb_patsopt_atscc2js_0_.php"
+    chtml: "https://atslangweb-postiats.rhcloud.com/SERVER/MYCODE/atslangweb_pats2xhtml_eval_0_.php"
 
   # get code from editor
   get_code: 
