@@ -1,0 +1,22 @@
+{
+  "name": "ats-tutorials",
+  "version": "0.0.1",
+  "description": "a build tool from markdown to ats-tutorial htmls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steinwaywhw/ats-tutorials.git"
+  },
+  "author": "Steinway Wu <steinwaywhw@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/steinwaywhw/ats-tutorials/issues"
+  },
+  "homepage": "https://github.com/steinwaywhw/ats-tutorials#readme",
+  "dependencies": {
+    "monaco-editor": "^0.5.3"
+  }
+}
