@@ -1,7 +1,7 @@
 ---
 hljs: true
 hljs-style: solarized-light
-ace-style: solarized_dark
+ace-style: solarized_light
 title: ATS Tutorial Tools
 ---
 
